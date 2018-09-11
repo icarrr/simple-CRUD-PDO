@@ -16,7 +16,8 @@
     $update = $database->update_data($id,$nim,$nama,$jurusan,$alamat);
 
     if($update == "True"){
-      echo "Data up-to-date";
+      // echo "Data up-to-date";
+      header('location: view.php');
     }else {
       echo "Failed";
     }
