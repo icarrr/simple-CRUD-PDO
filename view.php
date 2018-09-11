@@ -2,6 +2,7 @@
   require('function/core.php');
   $data = $database->tampil_data();
 
+  // jika tombol dengan identitas delete diklik, maka jalankan script berikut
   if(isset($_GET['delete'])){
     $delete = $database->delete_data($_GET['delete']);
     header('location: view.php');
@@ -29,6 +30,7 @@
         </tr>
       </thead>
       <tbody>
+        <!-- script perulangan agar dapat menampilkan data sesuai banyaknya yang ada dalam database  -->
         <?php while($row = $data->fetch(PDO::FETCH_OBJ)) { ?>
         <tr>
           <td><?php echo $row->id_user; ?></td>

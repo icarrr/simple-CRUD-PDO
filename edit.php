@@ -1,6 +1,7 @@
 <?php
   require('function/core.php');
 
+  // mendapatkan id data yang ditindak lanjuti 
   if(isset($_GET['id'])){
     $edit = $database->edit_data($_GET['id']);
     $row = $edit->fetch(PDO::FETCH_OBJ);

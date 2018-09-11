@@ -1,18 +1,19 @@
 <?php
-  require ('function/core.php');
+  require('function/core.php'); //memanggil function
 
+  // jika tombol submit di klik, akan mengirim data berikut
   if(isset($_POST['submit'])){
-    $nim = $_POST['nim'];
+    $nim = $_POST['nim']; // variabel nim diisi sesuai yang memiliki identitas nim
     $nama = $_POST['nama'];
     $jurusan = $_POST['jurusan'];
     $alamat = $_POST['alamat'];
 
-
+    // script agar tidak bisa mengirim data jika ada form yang belum di isi
     if(!empty(trim($nim)) && !empty(trim($nama)) && !empty(trim($jurusan)) && !empty(trim($alamat))){
       $input = $database->tambah_data($nim,$nama,$jurusan,$alamat);
 
       if($input == "True"){
-        header('location: view.php');
+        header('location: view.php'); // sebagai pengecekan, jika berhasil update diredirect ke page view
       }
       }else{
         echo "Gagal input data";
