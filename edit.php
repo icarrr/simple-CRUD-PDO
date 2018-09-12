@@ -1,7 +1,7 @@
 <?php
   require('function/core.php');
 
-  // mendapatkan id data yang ditindak lanjuti 
+  // mendapatkan id data yang ditindak lanjuti
   if(isset($_GET['id'])){
     $edit = $database->edit_data($_GET['id']);
     $row = $edit->fetch(PDO::FETCH_OBJ);
@@ -37,7 +37,7 @@
       <table>
         <tr>
           <td>Nim</td>
-          <td><input type="text" name="nim" placeholder="NIM" value="<?php echo $row->nim ?>"> </td>
+          <td><input type="text" name="nim" placeholder="NIM" value="<?php echo $row->nim ?>"> </td> <!-- menampilkan data sesuai namanya, misal nim -->
         </tr>
         <tr>
           <td>Nama</td>

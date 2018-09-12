@@ -1,5 +1,5 @@
 <?php
-  require('function/core.php'); //memanggil function
+  require('function/core.php'); // memanggil function
 
   // jika tombol submit di klik, akan mengirim data berikut
   if(isset($_POST['submit'])){
@@ -8,7 +8,7 @@
     $jurusan = $_POST['jurusan'];
     $alamat = $_POST['alamat'];
 
-    // script agar tidak bisa mengirim data jika ada form yang belum di isi
+    // agar tidak bisa mengirim data jika ada form yang belum di isi
     if(!empty(trim($nim)) && !empty(trim($nama)) && !empty(trim($jurusan)) && !empty(trim($alamat))){
       $input = $database->tambah_data($nim,$nama,$jurusan,$alamat);
 

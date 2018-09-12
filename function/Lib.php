@@ -14,6 +14,7 @@
     function tambah_data($nim,$nama,$jurusan,$alamat){
       $data = $this->db->query("INSERT INTO user (nim,nama,jurusan,alamat) VALUES ('$nim','$nama','$jurusan','$alamat')");
 
+      // untuk pengujian jika tombol submit di klik
       if(!$data){
         return "False";
       }else {
@@ -30,6 +31,7 @@
     function update_data($id,$nim,$nama,$jurusan,$alamat){
       $query = $this->db->query("UPDATE user SET nim='$nim', nama='$nama', jurusan='$jurusan', alamat='$alamat' WHERE id_user='$id'");
 
+      // untuk pengujian jka tombol submit di klik
       if(!$query){
         return "False";
       }else{
