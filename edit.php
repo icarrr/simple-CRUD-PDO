@@ -18,7 +18,7 @@
 
     if($update == "True"){
       // echo "Data up-to-date";
-      header('location: view.php');
+      header('location: view.php'); // jika ingin diredirect setelah update
     }else {
       echo "Failed";
     }
