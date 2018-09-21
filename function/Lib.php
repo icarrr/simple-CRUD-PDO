@@ -2,7 +2,7 @@
   class Lib{
     // koneksi ke database
     function __construct(){
-      $this->db =  new PDO('mysql:host=localhost;dbname=dbDasar;','root','resistance');
+      $this->db =  new PDO('mysql:host=localhost;dbname=dbDasar;','root','password');
     }
 
     // menampilkan data dari database
